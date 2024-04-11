@@ -4,19 +4,22 @@ namespace FactoryPattern
 	public class VehicleFactory
 	{
 
-		public static IVehicle GetVehicle(string choiceTires)
+		public static IVehicle GetVehicle(int amountOfTires)
 		{
-			switch(choiceTires)
+			if(amountOfTires == 2)
 			{
-				case "18":
-					Console.WriteLine("BigRig");
-					return new BigRig();
-				case "2":
-					Console.WriteLine("Motorcycle");
-					return new Motorcycle();
-				default:
-                    Console.WriteLine("Motorcycle");
-                    return new Motorcycle();
+				Console.WriteLine("MotorCycle");
+				return new Motorcycle();
+			}
+			if(amountOfTires == 18)
+			{
+				Console.WriteLine("BigRig");
+				return new BigRig();
+			}
+			else
+			{
+				Console.WriteLine("Car");
+				return new Car();
 			}
 		}
 		

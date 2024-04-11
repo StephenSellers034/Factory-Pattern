@@ -5,6 +5,10 @@ namespace FactoryPattern
 	{
 		public int NumberOfTires { get; set; }
 
+		public int Year { get; set;}
+
+		public string Speed { get; set; }
+
 		public void Drive();
 	}
 }
